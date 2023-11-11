@@ -1,0 +1,35 @@
+.layout {
+  @apply h-full;
+  @apply flex flex-row gap-8 overflow-auto;
+  @apply m-auto;
+
+  & .application-list {
+    @apply h-full w-96 overflow-auto sticky top-0;
+    @apply px-4 py-4;
+  }
+
+  & .driver-container {
+    @apply flex-1;
+    @apply flex py-16 overflow-auto;
+
+    & .mobile-simulator {
+      @apply m-auto;
+      @apply shrink-0 w-[24rem] h-[54rem] overflow-visible;
+      @apply relative bg-white;
+
+      &::before {
+        content: "";
+        @apply absolute inset-0 z-10;
+        @apply rounded-3xl ring-[2rem] ring-black;
+        @apply pointer-events-none;
+      }
+      &::after {
+        content: "";
+        @apply w-16 h-2 rounded-full;
+        @apply bg-white/25;
+        @apply absolute -top-5 left-1/2 -translate-x-1/2 z-20;
+        @apply pointer-events-none;
+      }
+    }
+  }
+}

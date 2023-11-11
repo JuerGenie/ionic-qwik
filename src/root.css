@@ -1,0 +1,22 @@
+@tailwind base;
+
+html {
+  @apply w-screen h-screen;
+}
+
+body {
+  @apply w-full h-screen overflow-auto;
+
+  & > div#app {
+    @apply w-full h-full overflow-auto;
+  }
+
+  & blockquote {
+    @apply px-2 py-1 bg-gray-500/10 rounded-r-lg;
+    @apply border-l-8 border-gray-500/50;
+  }
+
+  & code > pre {
+    @apply px-4 py-4 bg-gray-500/10 rounded-lg;
+  }
+}

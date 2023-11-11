@@ -1,47 +1,48 @@
-# Qwik Library ⚡️
+# What's `ionic-qwik`?
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik on GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+`ionic-qwik` is a binding for Ionic in Qwik. It lets you build Ionic apps with Qwik, a lightweight framework for building web apps with JSX.
 
----
+# How to use `ionic-qwik`?
 
-## Project Structure
+You can use npm, yarn or pnpm.
 
-Inside your project, you'll see the following directories and files:
+## Install
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── index.ts
+```bash
+npm install ionic-qwik
+yarn add ionic-qwik
+pnpm add ionic-qwik
 ```
 
-- `src/components`: Recommended directory for components.
+## Register
 
-- `index.ts`: The entry point of your component library, make sure all the public components are exported from this file.
+In your `/src/root.tsx` file, add the following code:
 
-## Development
+```jsx
+import { IonicHeader } from "./index";
 
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules are loaded by the browser.
+export default component$(() => {
+  return (
+    <QwikCityProvider>
+      <head>
+        <meta charSet="utf-8" />
+        <title>Qwik Blank App</title>
 
+        <ServiceWorkerRegister />
+
+        <!-- Add header, to register `ionic`'s web-components and styles. -->
+        <IonicHeader config$={() => ({ mode: "ios" })} />
+      </head>
+      <body>
+        <div id="app">
+          <RouterOutlet />
+        </div>
+      </body>
+    </QwikCityProvider>
+  );
+});
 ```
-pnpm dev
-```
 
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
+## Examples
 
-## Production
-
-The production build should generate the production build of your component library in (./lib) and the typescript type definitions in (./lib-types).
-
-```
-pnpm build
-```
+See [`examples`](https://github.com/juergenie/ionic-qwik).

@@ -1,0 +1,5 @@
+.tabbar-application {
+  & :is(#home-page, #radio-page, #library-page, #search-page) {
+    @apply h-full;
+  }
+}

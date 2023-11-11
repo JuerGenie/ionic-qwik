@@ -1,0 +1,5 @@
+.index-page {
+  & ion-card-content {
+    @apply flex flex-col gap-2;
+  }
+}

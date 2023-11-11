@@ -32,7 +32,10 @@ export interface ThemeProperties {
 
 export const transform = (obj: object) => {
   return Object.fromEntries(
-    Object.entries(obj).map(([key, value]) => [Case.kebab(key), value]),
+    Object.entries(obj).map(([key, value]) => [
+      key.endsWith("$") ? key : Case.kebab(key),
+      value,
+    ]),
   );
 };
 

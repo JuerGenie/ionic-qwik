@@ -1,0 +1,1 @@
+export { IonicHeader } from "./IonicHeader";

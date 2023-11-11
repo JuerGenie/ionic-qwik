@@ -6,7 +6,12 @@
     "name": "JuerGenie",
     "email": "juergenie@qq.com"
   },
+  "license": "MIT",
   "homepage": "https://github.com/juergenie/ionic-qwik",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juergenie/ionic-qwik"
+  },
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
   "types": "./lib-types/index.d.ts",

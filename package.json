@@ -1,6 +1,6 @@
 {
   "name": "ionic-qwik",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The `qwik` bindings for `@ionic/core`.",
   "author": {
     "name": "JuerGenie",

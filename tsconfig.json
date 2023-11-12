@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "target": "ES2020",
+    "target": "ES2017",
     "module": "ES2020",
     "lib": ["es2020", "DOM"],
     "jsx": "react-jsx",
@@ -17,7 +17,5 @@
     "isolatedModules": true,
     "types": ["vite/client"]
   },
-  "files": ["./.eslintrc.cjs"],
-  "include": ["src", "./*.d.ts", "./*.config.ts"],
-  "exclude": ["node_modules", "lib", "lib-types"]
+  "include": ["src"]
 }

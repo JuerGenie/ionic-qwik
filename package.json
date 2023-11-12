@@ -1,6 +1,6 @@
 {
   "name": "ionic-qwik",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The `qwik` bindings for `@ionic/core`.",
   "author": {
     "name": "JuerGenie",
@@ -14,12 +14,12 @@
   },
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
-  "types": "./lib-types/index.d.ts",
+  "types": "./lib-types/src/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib/index.qwik.mjs",
       "require": "./lib/index.qwik.cjs",
-      "types": "./lib-types/index.d.ts"
+      "types": "./lib-types/src/index.d.ts"
     }
   },
   "files": [

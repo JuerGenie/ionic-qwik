@@ -1,7 +1,8 @@
 import type { HTMLAttributes, QRL, Signal } from "@builder.io/qwik";
 import type { JSX } from "@builder.io/qwik/jsx-runtime";
 import type { HTMLStencilElement } from "@ionic/core";
-import Case from "case";
+// import { kebab } from "case";
+import { kebabCase } from "change-case";
 
 type Ref<T extends Element = Element> = Signal<T | undefined> | RefFnInterface;
 
@@ -33,7 +34,7 @@ export interface ThemeProperties {
 export const transform = (obj: object) => {
   return Object.fromEntries(
     Object.entries(obj).map(([key, value]) => [
-      key.endsWith("$") ? key : Case.kebab(key),
+      key.endsWith("$") ? key : kebabCase(key),
       value,
     ]),
   );

@@ -6,7 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 const { dependencies = {}, peerDependencies = {} } = pkg as any;
 const makeRegex = (dep: string) => new RegExp(`^${dep}(/.*)?$`);
-const excludeAll = (obj: object) => Object.keys(obj).map(makeRegex);
+const excludeAll = (obj: any) => Object.keys(obj).map(makeRegex);
 
 export default defineConfig(() => {
   return {
@@ -26,6 +26,10 @@ export default defineConfig(() => {
         ],
       },
     },
-    plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
+    plugins: [
+      process.env.NODE_ENV === "production" ? undefined : qwikCity(),
+      qwikVite(),
+      tsconfigPaths(),
+    ],
   };
 });

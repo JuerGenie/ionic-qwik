@@ -1,6 +1,6 @@
 {
   "name": "ionic-qwik",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The `qwik` bindings for `@ionic/core`.",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
